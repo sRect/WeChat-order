@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-require('./assets/js/fontSize')
+// require('./assets/js/fontSize')
 const FastClick = require('fastclick')
 
 Vue.config.productionTip = false

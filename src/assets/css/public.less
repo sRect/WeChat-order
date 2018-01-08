@@ -1,0 +1,28 @@
+.boxSizing(){
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.borderRadius(@radius: 5px){ // 参数默认5px
+ -webkit-border-radius:@radius;
+ -moz-border-radius:@radius;
+ -ms-border-radius:@radius;
+ -o-border-radius:@radius;
+ border-radius:@radius;
+}
+
+.onePx(@color: #ddd, @type: solid){ // 1px边框实现
+  content: '';
+  height: 200%;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 1px @type @color;
+  -webkit-transform: scale(0.5,0.5);
+  transform: scale(0.5,0.5);
+  -webkit-transform-origin: top left;
+}

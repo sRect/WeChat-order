@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueLazyload from 'vue-lazyload'
 
 require('./assets/js/fontSize')
 const FastClick = require('fastclick')
@@ -14,6 +15,8 @@ if ('addEventListener' in document) {
     FastClick.attach(document.body);
   }, false);
 }
+
+Vue.use(VueLazyload)
 
 /* eslint-disable no-new */
 new Vue({

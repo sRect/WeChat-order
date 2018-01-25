@@ -21,4 +21,5 @@ export default {
 <style lang="less">
 @import '~vux/src/styles/reset.less';
 @import './assets/css/base.css';
+@import './assets/css/reset_vux.less';
 </style>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const Home = () => import('@/components/Home')
+const ProductDetail = () => import('@/components/ProductDetail')
 
 Vue.use(Router)
 
@@ -15,8 +16,18 @@ export default new Router({
       name: 'Home',
       component: Home,
       meta: {
-        keepAlive: true
-      }
+        keepAlive: true,
+        title: ''
+      },
+    },
+    {
+      path: '/productdetail/index/:index',
+      name: 'ProductDetail',
+      component: ProductDetail,
+      meta: {
+        keepAlive: false,
+        title: '产品详情'
+      },
     },
     {
       path: '/',

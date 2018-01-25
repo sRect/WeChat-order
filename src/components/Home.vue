@@ -25,6 +25,7 @@
       <ul class="proList clearfix">
         <li
           class="pro noOrder fl"
+          @click="handleClick(index)"
           v-for="(val, index) in proList"
           :key="index">
           <div class="proImgWrap">
@@ -51,7 +52,7 @@
 </template>
 
 <script>
-import { Tab, TabItem, Rater, Group } from 'vux'
+import { Tab, TabItem, Rater, Group,debounce } from 'vux'
 
 export default {
   name: 'Home',
@@ -106,7 +107,12 @@ export default {
   methods: {
     onItemClick(index) {
       console.log('on item click:', index)
-    }
+    },
+    handleClick: debounce(function(index) {
+      this.$router.push({name: "ProductDetail", params:{index: index}})
+    }, 300,{
+      'maxWait': 500
+    })
   }
 }
 </script>

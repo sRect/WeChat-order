@@ -49,7 +49,7 @@
               <div></div>
               <div class="xnumber">
                 <group>
-                  <x-number :min="-5" :max="8" :value="1"></x-number>
+                  <x-number :min="-5" :max="8" :value="1" width="25px"></x-number>
                 </group>
               </div>
             </div>
@@ -207,7 +207,7 @@ export default {
         margin-bottom: 0.2rem;
         >.fiveProCard {
           >.xnumber {
-            width: 1.3rem;
+            display: inline;
           }
         }
       }
@@ -217,5 +217,6 @@ export default {
     }
   }
 }
+
 </style>
 

@@ -102,6 +102,30 @@
           </li>
         </ul>
       </div>
+
+    </section>
+    <section class="footer">
+      <div class="inFooter vux-1px-t clearfix">
+        <div class="left fl">
+          <div class="shopDes clearfix">
+            <div class="fl">
+              <p>
+                <i class="iconfont icon-clock"></i>随时退
+              </p>
+              <p>
+                <i class="iconfont icon-trues"></i>已售1200份
+              </p>
+            </div>
+            <div class="fr">
+              <span>123<small>元　<strike class="originalPrice">1900元</strike></small></span>
+            </div>
+          </div>
+        </div>
+        <div class="right fr">
+          <i class="iconfont icon-gouwuche"></i>
+          <p>加入购物车</p>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -201,7 +225,7 @@ export default {
 }
 .proTypeWrap {
   width: 100%;
-  padding: 0.3rem;
+  padding: 0.3rem 0.3rem 1.8rem 0.3rem;
   box-sizing: border-box;
   background-color: #fff;
   >.freeWrap {
@@ -266,6 +290,73 @@ export default {
     }
   }
 }
-
+.footer {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  >.inFooter {
+    height: 1.5rem;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    >.left {
+      width: 70%;
+      padding: 0.3rem;
+      box-sizing: border-box;
+      >.shopDes {
+        >.fl {
+          max-width: 40%;
+          .iconfont {
+            margin-right: 0.1rem;
+          }
+          p,i{
+            font-size: 12px;
+            color: #B4BBC8;
+          }
+        }
+        >.fr {
+          max-width: 60%;
+          line-height: 1;
+          word-break:keep-all;
+          white-space:nowrap;
+          >span {
+            color: #DD0A16;
+            font-family: 'PingFangSC-Medium';
+            font-size: 30px;
+            >small {
+              font-size: 12px;
+              // color: #B4BBC8;
+              >.originalPrice {
+                color: #B4BBC8;
+              }
+            }
+          }
+        }
+      }
+    }
+    >.right {
+      width: 30%;
+      height: 100%;
+      background-color: #DD0A16;
+      text-align: center;
+      color: #fff;
+      padding: 0.1rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      >.icon-gouwuche {
+        font-size: 25px;
+      }
+      >p {
+        position: relative;
+        bottom: 0.1rem;
+      }
+    }
+  }
+}
 </style>
 

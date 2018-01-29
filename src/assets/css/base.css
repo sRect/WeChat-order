@@ -15,6 +15,11 @@ body, html {
   -webkit-text-size-adjust: 100%; /* 禁用字号自动调整 */
   -ms-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: /*适配iPhoneX*/
+    constant(safe-area-inset-top)
+    constant(safe-area-inset-right)
+    constant(safe-area-inset-bottom)
+    constant(safe-area-inset-left);
 }
 a,a:active,a:hover,a:focus,a:visited{text-decoration:none}
 a,img{-webkit-touch-callout:none}

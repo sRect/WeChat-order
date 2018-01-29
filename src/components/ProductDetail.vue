@@ -43,11 +43,11 @@
       </div>
       <div class="fiveArea">
         <p class="proTypeTitle">5元区</p>
-        <ul class="fiveProCon">
+        <ul class="fiveProCon clearfix">
           <li>
-            <div class="fiveProCard">
-              <div></div>
-              <div class="xnumber">
+            <div class="fiveProCard clearfix">
+              <div class="dishName fl nowrap">哈ooo哈哈哈</div>
+              <div class="xnumber fr">
                 <group>
                   <x-number :min="-5" :max="8" :value="1" width="25px"></x-number>
                 </group>
@@ -55,13 +55,49 @@
             </div>
           </li>
           <li>
-            <div>
-
+            <div class="fiveProCard clearfix">
+              <div class="dishName fl nowrap">露丝露丝</div>
+              <div class="xnumber fr">
+                <group>
+                  <x-number :min="-5" :max="8" :value="1" width="25px"></x-number>
+                </group>
+              </div>
             </div>
           </li>
           <li>
-            <div>
+            <div class="fiveProCard clearfix">
+              <div class="dishName fl nowrap">露丝露丝</div>
+              <div class="xnumber fr">
+                <group>
+                  <x-number :min="-5" :max="8" :value="1" width="25px"></x-number>
+                </group>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
+      <div class="fiveArea">
+        <p class="proTypeTitle">10元区</p>
+        <ul class="fiveProCon clearfix">
+          <li>
+            <div class="fiveProCard clearfix">
+              <div class="dishName fl nowrap">哈ooo哈哈哈</div>
+              <div class="xnumber fr">
+                <group>
+                  <x-number :min="-5" :max="8" :value="1" width="25px"></x-number>
+                </group>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="fiveProCard clearfix">
+              <div class="dishName fl nowrap">露丝露丝</div>
+              <div class="xnumber fr">
+                <group>
+                  <x-number :min="-5" :max="8" :value="1" width="25px"></x-number>
+                </group>
+              </div>
             </div>
           </li>
         </ul>
@@ -182,6 +218,7 @@ export default {
         text-align: center;
         max-width: 1.77rem;
         margin-bottom: 0.2rem;
+        position: relative;
       }
       >li.active {
         background-color: #DD0A16;
@@ -200,14 +237,26 @@ export default {
     >ul.fiveProCon{
       font-size: 0;
       >li {
-        display: inline-block;
+        float: left;
         width: 2.96rem;
         height: 0.6rem;
         background-color: rgba(244,244,248,1);
         margin-bottom: 0.2rem;
+        padding: 1px;
         >.fiveProCard {
+          width: 100%;
+          height: 100%;
+          >.dishName {
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            line-height: 0.6rem;
+            background-color: #fff;
+          }
           >.xnumber {
-            display: inline;
+            height: 100%;
+            // display: inline-block;
+            // width: 60%;
           }
         }
       }

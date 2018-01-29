@@ -6,17 +6,32 @@
 }
 
 // xnumber
-.vux-number-selector {
-  padding: 0 !important;
-}
-.vux-number-input {
-  height: 14px !important;
-  font-size: 14px !important;
-}
-.weui-cell {
-  padding: 0 !important;
-}
-.weui-cells {
-  margin-top: 0 !important;
-  background: none !important;
+.xnumber {
+  .vux-number-selector {
+    padding: 0.06rem 0;
+    border: 0;
+    color: #A3A3AF;
+    svg {
+      fill: #A3A3AF;
+    }
+  }
+  .vux-number-selector-plus {
+    margin-right: 0;
+  }
+  .weui-cells {
+    margin-top: 0;
+    background: none;
+  }
+  .weui-cell {
+    padding: 0.01rem 0;
+  }
+  .weui-cells:before,.weui-cells:after {
+    border: 0;
+  }
+  .vux-number-input {
+    height: 14px;
+    font-size: 14px;
+    padding: 6px 0;
+    border: 0;
+  }
 }

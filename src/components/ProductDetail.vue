@@ -121,7 +121,7 @@
             </div>
           </div>
         </div>
-        <div class="right fr">
+        <div class="right fr" @click="handleClick">
           <i class="iconfont icon-gouwuche"></i>
           <p>加入购物车</p>
         </div>
@@ -144,6 +144,11 @@ export default {
     return {
       imgSrc: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=618477273,3443545549&fm=27&gp=0.jpg',
       rate: 4
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$router.push({name: 'Payment'})
     }
   }
 }

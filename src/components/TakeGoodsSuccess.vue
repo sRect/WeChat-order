@@ -5,7 +5,7 @@
       <p>已提货</p>
     </section>
     <section class="btnWrap">
-      <button>返回首页</button>
+      <button @click="goHome">返回首页</button>
       <button @click="handleClick">个人中心</button>
     </section>
   </div>
@@ -16,7 +16,10 @@
     name: 'TakeGoodsSuccess',
     methods: {
       handleClick() {
-        // this.$router.push({name: 'TakeGoods'})
+        this.$router.push({name: 'PersonalCenter'})
+      },
+      goHome() {
+        this.$router.push({name: 'Home'})
       }
     }
   }

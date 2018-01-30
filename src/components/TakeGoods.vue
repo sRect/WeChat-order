@@ -34,7 +34,7 @@
     </section>
     <section class="footer">
       <div class="inFooter vux-1px-t">
-        <button>确认</button>
+        <button @click="handleClick">确认</button>
       </div>
     </section>
   </div>
@@ -59,6 +59,9 @@ import { Datetime,Group } from 'vux'
       change(val) {
         console.log(val)
         this.dateval = val;
+      },
+      handleClick() {
+        this.$router.push({name: 'TakeGoodsSuccess'})
       }
     }
   }

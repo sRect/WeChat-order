@@ -6,6 +6,7 @@ const ProductDetail = () => import('@/components/ProductDetail')
 const Payment = () => import('@/components/Payment')
 const PaymentSuccess = () => import('@/components/PaymentSuccess')
 const TakeGoods = () => import('@/components/TakeGoods')
+const TakeGoodsSuccess = () => import('@/components/TakeGoodsSuccess')
 
 Vue.use(Router)
 
@@ -54,6 +55,15 @@ export default new Router({
       path: '/takegoods',
       name: 'TakeGoods',
       component: TakeGoods,
+      meta: {
+        keepAlive: false,
+        title: '提货'
+      },
+    },
+    {
+      path: '/takegoodssuccess',
+      name: 'TakeGoodsSuccess',
+      component: TakeGoodsSuccess,
       meta: {
         keepAlive: false,
         title: '提货'

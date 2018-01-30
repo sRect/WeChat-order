@@ -5,6 +5,7 @@ const Home = () => import('@/components/Home')
 const ProductDetail = () => import('@/components/ProductDetail')
 const Payment = () => import('@/components/Payment')
 const PaymentSuccess = () => import('@/components/PaymentSuccess')
+const TakeGoods = () => import('@/components/TakeGoods')
 
 Vue.use(Router)
 
@@ -47,6 +48,15 @@ export default new Router({
       meta: {
         keepAlive: false,
         title: ''
+      },
+    },
+    {
+      path: '/takegoods',
+      name: 'TakeGoods',
+      component: TakeGoods,
+      meta: {
+        keepAlive: false,
+        title: '提货'
       },
     },
     {

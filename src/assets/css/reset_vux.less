@@ -36,3 +36,30 @@
   }
 }
 
+.shippingTime {
+  position: relative;
+  .weui-cells {
+    width: 100%;
+    background: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .weui-cells:before,.weui-cells:after {
+    border: 0;
+  }
+  .weui-cell_access .weui-cell__ft:after {
+    border-width: 0;
+  }
+  .vux-no-group-title {
+    height: 0.8rem;
+    margin-top: 0;
+  }
+  .vux-cell-value {
+    display: none;
+  }
+  .weui-cell_access:active {
+    background-color: rgba(0,0,0,0)
+  }
+}
+

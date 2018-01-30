@@ -6,7 +6,7 @@
     </section>
     <section class="btnWrap">
       <button>查看订单</button>
-      <button>朕提货了</button>
+      <button @click="handleClick">朕提货了</button>
     </section>
   </div>
 </template>
@@ -14,6 +14,11 @@
 <script>
   export default {
     name: 'PaymentSuccess',
+    methods: {
+      handleClick() {
+        this.$router.push({name: 'TakeGoods'})
+      }
+    }
   }
 </script>
 

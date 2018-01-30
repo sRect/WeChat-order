@@ -4,6 +4,7 @@ import Router from 'vue-router'
 const Home = () => import('@/components/Home')
 const ProductDetail = () => import('@/components/ProductDetail')
 const Payment = () => import('@/components/Payment')
+const PaymentSuccess = () => import('@/components/PaymentSuccess')
 
 Vue.use(Router)
 
@@ -34,6 +35,15 @@ export default new Router({
       path: '/payment',
       name: 'Payment',
       component: Payment,
+      meta: {
+        keepAlive: false,
+        title: ''
+      },
+    },
+    {
+      path: '/paymentsuccess',
+      name: 'PaymentSuccess',
+      component: PaymentSuccess,
       meta: {
         keepAlive: false,
         title: ''

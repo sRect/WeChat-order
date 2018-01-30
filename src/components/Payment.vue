@@ -41,7 +41,7 @@
           </p>
         </div>
         <div class="right fr">
-          <button>立即付款</button>
+          <button @click="handleClick">立即付款</button>
         </div>
       </div>
     </section>
@@ -51,7 +51,11 @@
 <script>
   export default {
     name: 'Payment',
-
+    methods: {
+      handleClick() {
+        this.$router.push({name: 'PaymentSuccess'})
+      }
+    }
   }
 </script>
 
@@ -135,6 +139,9 @@
         background-color: #DD0A16;
         >button {
           background: none;
+          -webkit-appearance:none;
+          appearance: none;
+          outline: none;
           border: 0;
           width: 100%;
           height: 100%;

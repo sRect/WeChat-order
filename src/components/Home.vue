@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="resetTab">
     <section class="bgImg">
       <img class="inBgImg" :src="mainBgc" alt="img">
       <div class="tabContent">
@@ -120,28 +120,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 @import '../assets/css/public.less';
-
-.vux-tab {
-  background-color: transparent;
-  height: 40px;
-  .vux-tab-item {
-    background: none;
-    position: relative;
-  }
-  .vux-tab-item::after {
-    content: '|';
-    color: #d4d4d4;
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 0.05rem;
-    top: 0;
-  }
-  .vux-tab-item:last-child::after,
-  .vux-tab-item:nth-child(3)::after {
-    content: '';
-  }
-}
 
 .bgImg {
   width: 100%;

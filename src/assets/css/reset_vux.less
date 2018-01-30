@@ -1,3 +1,27 @@
+.resetTab {
+  .vux-tab {
+    background-color: transparent;
+    height: 40px;
+    .vux-tab-item {
+      background: none;
+      position: relative;
+    }
+    .vux-tab-item::after {
+      content: '|';
+      color: #d4d4d4;
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 0.05rem;
+      top: 0;
+    }
+    .vux-tab-item:last-child::after,
+    .vux-tab-item:nth-child(3)::after {
+      content: '';
+    }
+  }
+}
+
 .vux-rater {
   line-height: 18px;
   .vux-rater-inner span{

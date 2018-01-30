@@ -3,7 +3,8 @@
     <section class="bgImg">
       <img class="inBgImg" :src="mainBgc" alt="img">
       <div class="tabContent">
-        <tab
+        <VuxTab :info="0"></VuxTab>
+        <!-- <tab
           :line-width="2"
           active-color="#DD0A16"
           defaultColor="#fff"
@@ -11,7 +12,7 @@
           <tab-item selected @on-item-click="onItemClick">点外卖</tab-item>
           <tab-item @on-item-click="onItemClick">个人中心</tab-item>
           <tab-item @on-item-click="onItemClick">门店查询</tab-item>
-        </tab>
+        </tab> -->
       </div>
       <div class="hotTitle"> 热/销/产/品</div>
       <div class="searchInput">
@@ -52,13 +53,11 @@
 </template>
 
 <script>
-import { Tab, TabItem, Rater, Group,debounce } from 'vux'
+import { Rater, Group,debounce } from 'vux'
 
 export default {
   name: 'Home',
   components: {
-    Tab,
-    TabItem,
     Group,
     Rater
   },

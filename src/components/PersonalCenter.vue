@@ -3,7 +3,8 @@
     <section class="bgImg">
       <img class="inBgImg" :src="mainBgc" alt="img">
       <div class="tabContent">
-        <tab
+        <VuxTab :info="1"></VuxTab>
+        <!-- <tab
           :line-width="2"
           active-color="#DD0A16"
           defaultColor="#fff"
@@ -11,7 +12,7 @@
           <tab-item @on-item-click="onItemClick">点外卖</tab-item>
           <tab-item selected @on-item-click="onItemClick">个人中心</tab-item>
           <tab-item @on-item-click="onItemClick">门店查询</tab-item>
-        </tab>
+        </tab> -->
       </div>
       <div class="customerInfo">
         <div class="avatar">
@@ -75,23 +76,14 @@
 </template>
 
 <script>
-import {Tab, TabItem } from 'vux'
-
 export default {
   name: 'PersonalCenter',
-  components: {
-    Tab,
-    TabItem
-  },
   data() {
     return {
       mainBgc: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517303117873&di=5103838fa3a3f804e0c0f50addbefd71&imgtype=0&src=http%3A%2F%2Fimg2.niutuku.com%2Fdesk%2F1207%2F0837%2Fntk28584.jpg',
     }
   },
   methods: {
-    onItemClick(index) {
-      console.log('on item click:', index)
-    },
   }
 }
 </script>

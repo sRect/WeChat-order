@@ -108,11 +108,42 @@
     >.inFooter {
       height: 1rem;
       width: 100%;
+      line-height: 1rem;
       background-color: #fff;
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
+      >.left {
+        color: #CBCBD2;
+        padding-left: 0.3rem;
+        strong {
+          color: #DD0A16;
+          font-size: 25px;
+          font-family:'PingFangSC-Medium';
+        }
+        small:first-child{
+          margin-right: 0.3rem;
+        }
+        small:last-child{
+          color: #DD0A16;
+        }
+      }
+      >.right {
+        height: 100%;
+        width: 2.34rem;
+        background-color: #DD0A16;
+        >button {
+          background: none;
+          border: 0;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+          text-align: center;
+          line-height: 1;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

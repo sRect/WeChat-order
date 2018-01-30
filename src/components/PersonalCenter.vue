@@ -32,7 +32,42 @@
       </div>
       <div class="orderListWrap">
         <ul class="inOrderListWrap">
-          <li></li>
+          <li class="order clearfix">
+            <div class="col-6 fl nowrap">
+              <i class="iconfont icon-youhuiquan"></i>
+              <span>这里是券1这里是券1这里是券1这里是券1这里是券1这里是券1这里是券1这里是券1</span>
+            </div>
+            <div class="col-2 fl">
+              <b>300</b>
+            </div>
+            <div class="col-2 fl takeGoods">
+              <input type="button" value="提货">
+            </div>
+          </li>
+          <li class="order clearfix">
+            <div class="col-6 fl">
+              <i class="iconfont icon-order my-icon"></i>
+              <span>这里是订单1</span>
+            </div>
+            <div class="col-2 fl">
+              <b>300</b>
+            </div>
+            <div class="col-2 fl takeGoods">
+              <input type="button" value="评价">
+            </div>
+          </li>
+          <li class="order clearfix">
+            <div class="col-6 fl">
+              <i class="iconfont icon-order my-icon"></i>
+              <span>这里是订单2</span>
+            </div>
+            <div class="col-2 fl">
+              <b>300</b>
+            </div>
+            <div class="col-2 fl">
+              <input type="button" value="已完成">
+            </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -62,6 +97,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import '../assets/css/public.less';
 .bgImg {
   width: 100%;
   height: 4.5rem;
@@ -121,6 +157,7 @@ export default {
   }
 }
 .orderList {
+  width: 100%;
   background-color: #fff;
   padding: 0.4rem 0.65rem;
   box-sizing: border-box;
@@ -149,6 +186,61 @@ export default {
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
       cursor: pointer;
+    }
+  }
+  >.orderListWrap {
+    width: 100%;
+    padding-top: 0.5rem;
+    >.inOrderListWrap {
+      width: 100%;
+      >li.order {
+        width: 100%;
+        height: 1.2rem;
+        padding: 0.3rem 0;
+        box-sizing: border-box;
+        position: relative;
+        >.col-6 {
+          width: 60%;
+          >span {
+            font-size: 15px;
+            margin-left: 0.2rem;
+          }
+        }
+        >.col-2 {
+          width: 20%;
+          text-align: center;
+          >b {
+            font-size: 15px;
+            font-weight: normal;
+            color: #000;
+          }
+        }
+        >.col-2:last-child {
+          text-align: right;
+          >input[type=button] {
+            background: none;
+            font-size: 13px;
+          }
+        }
+        .takeGoods {
+          >input {
+            color: #DD0A16;
+            border: 1px solid #DD0A16;
+            border-radius: 3px;
+            padding: 0.08rem 0.22rem;
+            cursor: pointer;
+          }
+        }
+        .iconfont {
+          color: #A6A8BB;
+        }
+        .my-icon {
+          font-size: 18px;
+        }
+      }
+      >li:not(:last-child):after{
+        .onePx(#DFE1EB, solid);
+      }
     }
   }
 }

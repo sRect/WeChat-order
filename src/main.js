@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VueLazyload from 'vue-lazyload'
+import VuxTab from './components/vuxtab'
 
 require('./assets/js/fontSize')
 const FastClick = require('fastclick')
@@ -17,6 +18,7 @@ if ('addEventListener' in document) {
 }
 
 Vue.use(VueLazyload)
+Vue.use(VuxTab)
 
 /* eslint-disable no-new */
 new Vue({

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import { WechatPlugin, LoadingPlugin, ToastPlugin } from 'vux'
 import VueLazyload from 'vue-lazyload'
 import VuxTab from './components/vuxtab'
 
@@ -17,7 +18,10 @@ if ('addEventListener' in document) {
   }, false);
 }
 
+Vue.use(WechatPlugin)
 Vue.use(VueLazyload)
+Vue.use(LoadingPlugin)
+Vue.use(ToastPlugin)
 Vue.use(VuxTab)
 
 /* eslint-disable no-new */

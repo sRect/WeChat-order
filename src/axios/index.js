@@ -1,7 +1,11 @@
+import Vue from 'vue'
 import axios from "axios";
 import qs from "qs";
-// import { Indicator, Toast } from "mint-ui";
+import { LoadingPlugin, ToastPlugin } from 'vux'
 import config from '../../static/config'
+
+Vue.use(LoadingPlugin)
+Vue.use(ToastPlugin)
 
 const Axios = axios.create({
   // baseURL: "http://192.168.1.54:8080",
@@ -31,7 +35,7 @@ Axios.interceptors.request.use( // POST传参序列化(添加请求拦截器)
     //   config.headers.Authorization = localStorage.token;
     // }
 
-    this.$vux.loading.show({
+    Vue.$vux.loading.show({
       text: '正在加载...'
     })
 
@@ -39,20 +43,20 @@ Axios.interceptors.request.use( // POST传参序列化(添加请求拦截器)
   },
   error => {
     console.log(error)
-    this.$vux.toast.show({
+    Vue.$vux.toast.show({
       text: error,
       type: 'warn',
       time: 5000,
       position: 'default'
     })
-    this.$vux.loading.hide()
+    Vue.$vux.loading.hide()
     return Promise.reject(error);
   }
 );
 
 Axios.interceptors.response.use( // 响应拦截器
   response => {
-    Indicator.close();
+    Vue.$vux.loading.hide()
     // if (res.status != 200) {
     //   alert(res.statusText);
     //   return Promise.reject(res);
@@ -68,7 +72,7 @@ Axios.interceptors.response.use( // 响应拦截器
     return response;
   },
   error => {
-    this.$vux.loading.hide()
+    Vue.$vux.loading.hide()
     if (error.response) {
       // 请求已发出，但服务器响应的状态码不在 2xx 范围内
       console.log(error.response.data);
@@ -96,7 +100,7 @@ Axios.interceptors.response.use( // 响应拦截器
       console.log('Error', error.message);
     }
 
-    this.$vux.toast.show({
+    Vue.$vux.toast.show({
       text: error.message + ',请刷新重试',
       type: 'warn',
       time: 5000,

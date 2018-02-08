@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import { WechatPlugin, LoadingPlugin, ToastPlugin } from 'vux'
 import VueLazyload from 'vue-lazyload'
+import axios from './axios'
 import VuxTab from './components/vuxtab'
 
 require('./assets/js/fontSize')
@@ -23,6 +24,7 @@ Vue.use(VueLazyload)
 Vue.use(LoadingPlugin)
 Vue.use(ToastPlugin)
 Vue.use(VuxTab)
+Vue.use(axios)
 
 /* eslint-disable no-new */
 new Vue({
